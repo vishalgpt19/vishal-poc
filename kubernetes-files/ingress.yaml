@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-wildcard-host
+spec:
+  rules:
+  - host: "javaapp.vishalkops.in"
+    http:
+      paths:
+      - backend:
+          serviceName: hello-java-service
+          servicePort: 80
+
+  - host: "pythonapp.vishalkops.in"
+    http:
+      paths:
+      - backend:
+          serviceName: hello-java-service
+          servicePort: 80
