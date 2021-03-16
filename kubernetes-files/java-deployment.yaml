@@ -31,3 +31,4 @@ spec:
         image: 245616658709.dkr.ecr.us-east-2.amazonaws.com/javaimage:latest
         ports:
         - containerPort: 8080
+        resources: {}
