@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: hello-java
-        image: 245616658709.dkr.ecr.us-east-2.amazonaws.com/javaimage:latest
+        image: 245616658709.dkr.ecr.us-east-2.amazonaws.com/javaimage:{{BUILD_NUMBER}}
         ports:
         - containerPort: 8080
         resources: {}
