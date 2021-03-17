@@ -82,6 +82,20 @@ pipeline
             }
         }
 
+        stage('Approval')
+        {
+		    input
+            {
+                message "Do you want to proceed for production deployment?"
+            }
+            steps
+            {
+                sh '''
+                    echo "You clicked on Yes."
+                '''
+            }
+        }
+
         stage('Deploy the Updated Code') 
         {
             steps 
